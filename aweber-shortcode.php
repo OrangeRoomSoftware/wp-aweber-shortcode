@@ -9,7 +9,6 @@
 
 add_filter('widget_text', 'do_shortcode');
 add_shortcode('aweber', 'aweber_shortcode_handler');
-
 function aweber_shortcode_handler($atts) {
   extract(shortcode_atts(array(
     'form_id' => '1330014209',
@@ -49,4 +48,10 @@ END;
 
   return $content;
 }
+
+# Stylesheet
+function aweber_stylesheets() {
+  wp_enqueue_style('aweber-style', '/wp-content/plugins/'.basename(dirname(__FILE__)).'/style.css', 'aweber-shortcode-style', null, 'all');
+}
+add_action('wp_print_styles', 'aweber_stylesheets', 6);
 
