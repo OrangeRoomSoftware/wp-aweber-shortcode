@@ -34,13 +34,13 @@ $content = <<<END
     <input type="hidden" name="meta_tooltip" value="<?php echo $tooltip; ?>" />
   </div>
 
-  <img src="/wp-content/plugins/aweber-shortcode/red-arrow.jpeg" style="float:right;" width='40'/>
+  <img src="/wp-content/plugins/wp-aweber-shortcode/red-arrow.jpeg" style="float:right;" width='40'/>
   <h1>SIGN UP FOR FREE</h1>
   <div><b>Get My Free Forex Video Newsletter.</b></div>
 
   <input type="text" name="name" placeholder="Enter Your Name"/>
   <input type="email" name="email" placeholder="Enter Your Email Address" class='email'/>
-  <button type="submit"><img src="/wp-content/plugins/aweber-shortcode/email-icon.gif"/> Sign Up</button>
+  <button type="submit"><img src="/wp-content/plugins/wp-aweber-shortcode/email-icon.gif"/> Sign Up</button>
 
   <p style="text-align:center"><a class="privacy" title="Privacy Policy" href="http://www.aweber.com/permission.htm" target="_blank">We respect your email privacy</a></p>
 </form>
