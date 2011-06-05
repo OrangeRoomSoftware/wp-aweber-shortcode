@@ -7,10 +7,10 @@ $(document).ready(function() {
     $('#aweber-signup-form-name')
       .val(name_placeholder)
       .focus(function(){$(this).val('');})
-      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder);
+      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder)});
     $('#aweber-signup-form-email')
       .val(email_placeholder)
       .focus(function(){$(this).val('');})
-      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder);
+      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder)});
   }
 });
