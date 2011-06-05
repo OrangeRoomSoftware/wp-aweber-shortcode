@@ -19,7 +19,9 @@ function aweber_shortcode_handler($atts) {
     'listname' => 'sign-ups',
     'message' => 1,
     'required' => 'name,email',
-    'tooltip' => ''
+    'tooltip' => '',
+    'title' => '',
+    'blurb' => ''
   ), $atts));
 
 $content = <<<END
@@ -36,8 +38,8 @@ $content = <<<END
   </div>
 
   <img src="/wp-content/plugins/wp-aweber-shortcode/red-arrow.jpeg" style="float:right;" width='40'/>
-  <h1>SIGN UP FOR FREE</h1>
-  <div><b>Get My Free Forex Video Newsletter.</b></div>
+  <h1>$title</h1>
+  <div><b>$blurb</b></div>
 
   <input type="text" name="name" placeholder="Enter Your Name" id="aweber-signup-form-name"/>
   <input type="email" name="email" placeholder="Enter Your Email Address" id='aweber-signup-form-email'/>
