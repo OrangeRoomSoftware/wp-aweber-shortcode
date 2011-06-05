@@ -20,8 +20,8 @@ function aweber_shortcode_handler($atts) {
     'message' => 1,
     'required' => 'name,email',
     'tooltip' => '',
-    'title' => '',
-    'blurb' => ''
+    'title' => 'SIGNUP FREE',
+    'blurb' => 'Get My Free Newsletter'
   ), $atts));
 
 $content = <<<END
