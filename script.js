@@ -10,7 +10,7 @@ $(document).ready(function() {
       .blur(function(){if($(this).val() == '') $(this).val(name_placeholder)});
     $('#aweber-signup-form-email')
       .val(email_placeholder)
-      .focus(function(){if($(this).val() == name_placeholder) $(this).val('');})
+      .focus(function(){if($(this).val() == email_placeholder) $(this).val('');})
       .blur(function(){if($(this).val() == '') $(this).val(name_placeholder)});
   }
 });
