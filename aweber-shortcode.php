@@ -5,13 +5,14 @@
 * Version: 1.0
 * Author: Phill Kenoyer
 * Description: Aweber shortcode to put a simple signup form in the sidebar
+* License: Public Domain
 */
 
 add_filter('widget_text', 'do_shortcode');
 add_shortcode('aweber', 'aweber_shortcode_handler');
 function aweber_shortcode_handler($atts) {
   extract(shortcode_atts(array(
-    'form_id' => '1330014209',
+    'form_id' => '',
     'split_id' => '',
     'redirect' => '',
     'adtracking' => 'sign-up-form',
