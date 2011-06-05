@@ -51,13 +51,13 @@ END;
 
 # Javascript
 function aweber_javascript() {
-  wp_enqueue_style('aweber-js', '/wp-content/plugins/'.basename(dirname(__FILE__)).'/script.js', 'aweber-shortcode-js', null, 'all');
+  wp_enqueue_script('aweber-js', '/wp-content/plugins/'.basename(dirname(__FILE__)).'/script.js', false, null, true);
 }
-add_action('wp_print_styles', 'aweber_js', 6);
+add_action('wp_print_scripts', 'aweber_javascript', 10);
 
 # Stylesheet
 function aweber_stylesheets() {
   wp_enqueue_style('aweber-style', '/wp-content/plugins/'.basename(dirname(__FILE__)).'/style.css', 'aweber-shortcode-style', null, 'all');
 }
-add_action('wp_print_styles', 'aweber_stylesheets', 6);
+add_action('wp_print_styles', 'aweber_stylesheets', 10);
 

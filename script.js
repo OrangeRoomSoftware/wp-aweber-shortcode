@@ -4,7 +4,13 @@ $(document).ready(function() {
   var email_placeholder = $('#aweber-signup-form-email').attr('placeholder');
 
   if ($('body.ie').length) {
-    $('#aweber-signup-form-name').val(name_placeholder).focus(function(){$(this).val('');});
-    $('#aweber-signup-form-email').val(email_placeholder).focus(function(){$(this).val('');});
+    $('#aweber-signup-form-name')
+      .val(name_placeholder)
+      .focus(function(){$(this).val('');})
+      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder);
+    $('#aweber-signup-form-email')
+      .val(email_placeholder)
+      .focus(function(){$(this).val('');})
+      .blur(function(){if($(this).val() == '') $(this).val(name_placeholder);
   }
 });
