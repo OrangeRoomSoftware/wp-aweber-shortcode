@@ -38,8 +38,8 @@ $content = <<<END
   <h1>SIGN UP FOR FREE</h1>
   <div><b>Get My Free Forex Video Newsletter.</b></div>
 
-  <input type="text" name="name" placeholder="Enter Your Name"/>
-  <input type="email" name="email" placeholder="Enter Your Email Address" class='email'/>
+  <input type="text" name="name" placeholder="Enter Your Name" id="aweber-signup-form-name"/>
+  <input type="email" name="email" placeholder="Enter Your Email Address" id='aweber-signup-form-email'/>
   <button type="submit"><img src="/wp-content/plugins/wp-aweber-shortcode/email-icon.gif"/> Sign Up</button>
 
   <p style="text-align:center"><a class="privacy" title="Privacy Policy" href="http://www.aweber.com/permission.htm" target="_blank">We respect your email privacy</a></p>
@@ -48,6 +48,12 @@ END;
 
   return $content;
 }
+
+# Javascript
+function aweber_javascript() {
+  wp_enqueue_style('aweber-js', '/wp-content/plugins/'.basename(dirname(__FILE__)).'/script.js', 'aweber-shortcode-js', null, 'all');
+}
+add_action('wp_print_styles', 'aweber_js', 6);
 
 # Stylesheet
 function aweber_stylesheets() {
